@@ -20,6 +20,10 @@ a:hover{
     color: #fff;
 }
 
+li{
+    margin-bottom: 7px;
+}
+
 #wholepage {
     margin: 5% auto;
     background-color: #c0c0c0;
