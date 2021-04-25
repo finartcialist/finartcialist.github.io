@@ -8,6 +8,8 @@ body {
 
 }
 
+p{text-align: justify}
+
 a{
     color: #333;
 }
@@ -44,6 +46,10 @@ h1{
     font-size: 24px;
 }
 
+h2{
+    font-size: 18px;
+}
+
 #menu {
     display: flex;
     flex-direction: row;
@@ -70,3 +76,4 @@ h1{
     color: rgb(0, 0, 0);
     
 }
+
