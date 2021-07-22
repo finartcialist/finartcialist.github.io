@@ -1,0 +1,178 @@
+body{
+background-color: #898989;
+opacity: 1;
+background-image:  linear-gradient(#ebffd6 2px, transparent 1px), linear-gradient(to right, #ebffd6 2px, #7cc084 1px);
+background-size: 150px 150px;
+display: flex;
+flex-flow: column;
+}
+
+#main-content{
+background-color: #fff;
+width: 55%;
+border-radius: 5px;
+margin: 3% 3% 0% 3% ;
+padding: 0px 2.5% 0px 2.5%;
+border: solid  #ebffd6 3px;
+overflow-y: scroll;
+}
+
+@media only all and (max-width: 450px) {
+  #main-content {
+  min-width: 93%;
+    max-width: 99%;
+  }
+}
+
+@media only all and (min-width: 450px) {
+  #main-content {
+    min-width: 15%;
+    max-width: 30$;
+  }
+}
+
+#main-container{
+display: flex;
+flex-flow: row;
+padding: 15px 15px 15px 0;
+
+}
+
+@media only all and (max-width: 450px) {
+  #main-container {
+    flex-flow: column;
+  }
+}
+
+
+#menu{
+    
+    width: 25%;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 3% 3% 0% 3%;
+    padding: 0px 2.5% 0px 2.5%;
+    border: solid  #ebffd6 5px;
+    
+
+}
+
+
+@media only all and (max-width: 450px) {
+  #menu {
+   min-width: 93%;
+    max-width: 99%;
+  }
+}
+
+
+img{
+display: block;
+margin: auto;
+width:50%;}
+
+h1{
+font-size: 64px;
+
+}
+
+@media only all and (max-width: 450px) {
+h1{
+font-size: 51px;
+}}
+
+h1,h2, h3{
+font-family: math;
+color:black;
+}
+
+h2, h3{
+font-size: 32px;}
+
+@media only all and (max-width: 450px) {
+h2,h3{
+font-size: 34px;
+}}
+
+p{
+font-family: sans-serif;
+color:black;
+font-size: 2.5vh;
+text-align: justify;
+}
+
+a{
+color:black;
+font-family: sans-serif;
+text-decoration: underline dotted;
+}
+
+#skip-menu{
+display: none;
+background-color: #fff;
+width: 75vw;
+max-width: 350px;
+border-radius:5px;
+margin: 0px 0px 0px 3%;
+border: solid  #ebffd6 3px;
+max-height: 15%;
+padding: 0px 0px 0px 5%;}
+
+
+@media only all and (max-width: 450px) {
+#skip-menu{
+display: block;
+}}
+
+
+
+header,footer{
+background-color: #fff;
+border-radius:5px;
+border: solid  #ebffd6 3px;
+
+}
+
+header{
+width: 93%;
+height: 25%;
+margin: 0px 0px 0px 3%;
+}
+
+footer{
+width: 55%;
+margin: 3% ;
+padding: 0px 2.5% 2.5% 2%;
+}
+
+.footer-p{
+font-size:1.75vh;}
+
+
+li{
+margin-bottom: 7px;
+font-family: sans-serif;
+font-size:2.5vh;
+}
+
+ 
+
+@media only all and (max-width: 450px) {
+  header, footer {
+   min-width: 93%;
+    max-width: 99%;
+    padding: 0px;
+    max-height: 50%;
+    min-height: 10%;}
+    
+  #skip-menu, #menu {
+  min-width: 93%;
+    max-width: 99%;
+    max-height: 50%;
+    min-height: 10%;
+  }  
+}
+
+
+
