@@ -1,3 +1,5 @@
+from datetime import datetime as dt
+from dateutil.tz import gettz
 import os
 from feedgen.feed import FeedGenerator
 
@@ -12,14 +14,13 @@ fg.subtitle("Fil RSS - finartcialist - arts x finance")
 fg.link(href="https://www.finartcialist.com", rel="self")
 fg.language("fr")
 
-for path, subFolders, files in os.walk("./fr/"):
+for root, subFolders, files in os.walk("./fr/"):
+    path = os.path.basename(root) + '/'
     for f in files:
         fe = fg.add_entry()
-        fe.id("https://www.finartcialist.com/fr/" + f)
+        fe.id("https://www.finartcialist.com/fr/"+ path + f)
         fe.title(f)
         fe.link(href="https://www.finartcialist.com/fr/demarche.html")
-    
+        fe.updated(dt.fromtimestamp(os.path.getmtime("./fr/" + path+ f),tz=gettz("America/New York")))
 
-# rssfeed = fg.rss_str(pretty=True)
-
-fg.rss_file('rss_fr.xml')
+fg.atom_file('atom_fr.xml')
