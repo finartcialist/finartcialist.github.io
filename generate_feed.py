@@ -15,12 +15,12 @@ fg.link(href="https://www.finartcialist.com", rel="self")
 fg.language("fr")
 
 for root, subFolders, files in os.walk("./fr/"):
-    path = os.path.basename(root) + '/'
+    path = os.path.basename(root) 
     for f in files:
         fe = fg.add_entry()
         fe.id("https://www.finartcialist.com/fr/"+ path + f)
         fe.title(f)
-        fe.link(href="https://www.finartcialist.com/fr/demarche.html")
-        fe.updated(dt.fromtimestamp(os.path.getmtime("./fr/" + path+ f),tz=gettz("America/New York")))
+        fe.link(href="https://www.finartcialist.com/fr/" + path + f)
+        fe.updated(dt.fromtimestamp(os.path.getmtime("./fr/" + path + '/'+ f),tz=gettz("America/New York")))
 
-fg.atom_file('atom_fr.xml')
+fg.atom_file('fr/atom_fr.xml')
