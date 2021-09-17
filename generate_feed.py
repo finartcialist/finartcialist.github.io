@@ -49,7 +49,7 @@ fg_en.author( {'name':'finartcialist', 'email':'info@finartcialist.com'})
 fg_en.link( href="https://www.finartcialist.com", rel='alternate')
 fg_en.subtitle("Fil RSS - finartcialist - arts x finance")
 fg_en.link(href="https://www.finartcialist.com", rel="self")
-fg_en.language("fr")
+fg_en.language("en")
 
 for root, subFolders, files in os.walk("./en/"):
     path = os.path.basename(root)
