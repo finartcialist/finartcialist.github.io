@@ -20,7 +20,10 @@ for root, subFolders, files in os.walk("./fr/"):
         fe = fg.add_entry()
         fe.id("https://www.finartcialist.com/fr/"+ path + f)
         fe.title(f)
-        fe.link(href="https://www.finartcialist.com/fr/" + path + f)
+        if len(path) > 0:
+            fe.link(href="https://www.finartcialist.com/fr/" + path + '/' + f)
+        else:
+            fe.link(href="https://www.finartcialist.com/fr/" + f)
         fe.updated(dt.fromtimestamp(os.path.getmtime("./fr/" + path + '/'+ f),tz=gettz("America/New York")))
 
 fg.atom_file('fr/atom_fr.xml')
