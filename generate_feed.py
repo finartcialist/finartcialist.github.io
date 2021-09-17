@@ -21,16 +21,16 @@ for root, subFolders, files in os.walk("./fr/"):
     for f in files:
         if f != "atom_fr.xml":
             if len(path) > 0:
-                path_to_html = './fr/' + path + '/' + f
+                path_to_html = 'fr/' + path + '/' + f
             else:
-                path_to_html = './fr/' + f
+                path_to_html = 'fr/' + f
             print(path_to_html)
-            with open(path_to_html) as html_text:
+            with open('./' + path_to_html) as html_text:
                 soup = BeautifulSoup(html_text, 'html.parser')
                 title = soup.title.string
 
             fe = fg.add_entry()
-            fe.id("https://www.finartcialist.com/fr/"+ path + f)
+            fe.id("https://www.finartcialist.com/" + path_to_html)
             fe.title(title)
             if len(path) > 0:
                 fe.link(href="https://www.finartcialist.com/fr/" + path + '/' + f)
@@ -43,7 +43,7 @@ fg.atom_file('fr/atom_fr.xml')
 fg_en = FeedGenerator()
 fg_en.load_extension('base')
 
-fg_en.id('https://www.finartcialist.com/fr/index.html')
+fg_en.id('https://www.finartcialist.com/en/index.html')
 fg_en.title('finartcialist')
 fg_en.author( {'name':'finartcialist', 'email':'info@finartcialist.com'})
 fg_en.link( href="https://www.finartcialist.com", rel='alternate')
@@ -57,16 +57,16 @@ for root, subFolders, files in os.walk("./en/"):
     for f in files:
         if f != "atom_en.xml":
             if len(path) > 0:
-                path_to_html = './en/' + path + '/' + f
+                path_to_html = 'en/' + path + '/' + f
             else:
-                path_to_html = './en/' + f
+                path_to_html = 'en/' + f
             print(path_to_html)
-            with open(path_to_html) as html_text:
+            with open('./' + path_to_html) as html_text:
                 soup = BeautifulSoup(html_text, 'html.parser')
                 title = soup.title.string    
     
             fe = fg_en.add_entry()
-            fe.id("https://www.finartcialist.com/en/"+ path + f)
+            fe.id("https://www.finartcialist.com/" + path_to_html)
             fe.title(title)
             if len(path) > 0:
                 fe.link(href="https://www.finartcialist.com/en/" + path + '/' + f)
