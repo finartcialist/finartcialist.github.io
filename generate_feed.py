@@ -15,7 +15,7 @@ fg.link(href="https://www.finartcialist.com", rel="self")
 fg.language("fr")
 
 for root, subFolders, files in os.walk("./fr/"):
-    path = os.path.basename(root) 
+    path = os.path.basename(root)
     for f in files:
         fe = fg.add_entry()
         fe.id("https://www.finartcialist.com/fr/"+ path + f)
