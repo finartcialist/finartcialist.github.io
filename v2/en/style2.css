@@ -1,0 +1,178 @@
+html{
+
+scroll-behavior: smooth;}
+
+
+body{
+background-color: #2dbc94;
+opacity: 1;
+background-image:  linear-gradient(#96bfe6 2px, transparent 1px), linear-gradient(to right, #96bfe6 2px, #2dbc94 1px);
+background-size: 150px 150px;
+display: flex;
+flex-flow: column;
+}
+
+#main-content{
+background-color: #fff;
+width: 55%;
+max-width: 600px;
+border-radius: 5px;
+margin: 3% 3% 0% 3% ;
+padding: 0px 2.5% 0px 2.5%;
+border: solid  #96bfe6 3px;
+
+}
+
+a{
+color:black;
+font-family: sans-serif;
+text-decoration: underline;
+font-size: 16px;
+}
+
+
+@media only all and (max-width: 450px) {
+  #main-content {
+  margin: 0px;
+  padding:0px;
+  min-width: 100%;
+  }
+}
+
+@media only all and (min-width: 450px) {
+  #main-content {
+    min-width: 15%;
+    max-width: 30$;
+  }
+}
+
+#main-container{
+display: flex;
+flex-flow: row;
+padding: 15px 15px 15px 0;
+
+}
+
+@media only all and (max-width: 450px) {
+  #main-container {
+    flex-flow: column;
+  }
+}
+
+
+#menu{
+    
+    width: 27%;
+    max-width: 250px;
+    height: 15%;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 3% 3% 0% 3%;
+    padding: 0px 2.5% 0px 2.5%;
+    border: solid  #96bfe6 5px;
+    
+            position: -webkit-sticky; /* Safari */
+          position: sticky;
+          top:15px;
+}
+
+
+
+img{
+display: block;
+margin: auto;
+width:50%;}
+
+#h1-header{
+font-size: 48px;
+
+}
+
+h1 .project-title{
+font-size: 36px;
+}
+
+@media only all and (max-width: 450px) {
+h1{
+font-size: 34px;
+}}
+
+h1,h2, h3{
+font-family: math;
+color:black;
+}
+
+h2, h3{
+font-size: 32px;}
+
+@media only all and (max-width: 450px) {
+h2,h3{
+font-size: 34px;
+}}
+
+p{
+font-family: sans-serif;
+color:black;
+font-size: 16px;
+text-align: justify;
+}
+
+
+header{
+background-color: #fff;
+border-radius:5px;
+border: solid  #96bfe6 3px;
+width: 90%;
+max-width: 1140px;
+height: 25%;
+margin: 50px 0px 0px 3%;
+    padding: 0px 5px 0px 15px;
+}
+
+
+.header-p{
+font-size:18px;}
+
+
+li{
+margin-bottom: 7px;
+font-family: sans-serif;
+font-size:16px;
+}
+
+ 
+
+@media only all and (max-width: 450px) {
+
+#main-container{
+   width: 98%;
+   margin: 0px;
+    padding: 0px;
+}
+
+#main-content{
+width: 98%;
+   margin: 3px 0 0 0;
+padding: 0px;}
+
+  header {
+   width: 96%;
+   margin: 3px 0 0 0;
+    padding: 0px;
+    max-height: 50%;
+    min-height: 10%;}
+    
+  #menu {
+    max-height: 50%;
+    min-height: 10%;
+    width: 98%;
+    max-width: 100%;
+   margin: 3px 0 0 0;
+    padding: 0 0 3px 0;
+    bottom: 0px;
+    background-color: #bfffe6;
+    border-color: #2dbc94; }
+}
+
+
+

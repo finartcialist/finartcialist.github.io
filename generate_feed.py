@@ -1,3 +1,5 @@
+# https://finartcialist.com/en/atom_en.xml
+
 from datetime import datetime as dt
 from dateutil.tz import gettz
 import os
