@@ -102,7 +102,10 @@ font-family: sans-serif;
 color:black;
 }
 
-h2, h3{
+h2{
+font-size: 24px;}
+
+h3{
 font-size: 16px;}
 
 @media only all and (max-width: 450px) {
@@ -115,6 +118,7 @@ font-family: sans-serif;
 color:black;
 font-size: 16px;
 text-align: justify;
+padding: 0 4px 0 4px;
 }
 
 
