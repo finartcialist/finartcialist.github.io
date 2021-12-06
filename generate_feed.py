@@ -39,10 +39,8 @@ for root, subFolders, files in os.walk(dot + fr_path):
             fe = fg.add_entry()
             fe.id("https://www.finartcialist.com/" + path_to_html)
             fe.title(title)
-            if len(path) > 0:
-                fe.link(href="https://www.finartcialist.com" + path + '/' + f)
-            else:
-                fe.link(href="https://www.finartcialist.com" + f)
+            # if len(path) > 0:
+            fe.link(href="https://www.finartcialist.com/" + path_to_html)
             fe.updated(dt.fromtimestamp(os.path.getmtime(dot + fr_path + path + '/'+ f),tz=gettz("America/New York")))
 
 fg.atom_file('fil.xml')
@@ -78,10 +76,10 @@ for root, subFolders, files in os.walk(dot + en_path):
             fe = fg_en.add_entry()
             fe.id("https://www.finartcialist.com/" + path_to_html)
             fe.title(title)
-            if len(path) > 0:
-                fe.link(href="https://www.finartcialist.com/" + path + '/' + f)
-            else:
-                fe.link(href="https://www.finartcialist.com/" + f)
+            # if len(path) > 0:
+            fe.link(href="https://www.finartcialist.com/" + path_to_html)
+            # else:
+            #   fe.link(href="https://www.finartcialist.com/" + f)
             fe.updated(dt.fromtimestamp(os.path.getmtime(dot + en_path + path + '/'+ f),tz=gettz("America/New York")))
 
 fg_en.atom_file('feed.xml')
