@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frozen music - finartcialist</title>
+    <link href="../style2.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <header>  
+    <p><a id="h1-header" href="./index.html">finartcialist</a><p>
+    <p class="header-p">art & finance - depuis 2016</p>
+<p class="header-p"> contact :  <a href="mailto:info@finartcialist.com">info@finartcialist.com</a></p>
+    </header>
+    
+    <div id="main-container">
+
+    
+    <div id="main-content">
+
+    
+    <h1 class="project-title" id="titre"><a href="#titre">frozen music --- one</a></h1>
+    <h2 id="liens"><a href="#liens">liens</a></h2>
+<p><a href="https://finartcialist.bandcamp.com/album/frozen-music-one">album sur Bandcamp</a></p>
+    <h2 id="extraits"><a href="#extraits">extrait</a></h2>
+<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3741726631/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/" seamless><a href="https://finartcialist.bandcamp.com/album/frozen-music-one">frozen music --- one by finartcialist</a></iframe>
+    <h2 id="demarche"><a href="#demarche">démarche</a></h2>
+    
+   <p> Il n'y a pas que l'architecture qui puisse être considérée comme de la musique figée - les données aussi.</p>
+
+<p>Cette première étude consiste à la création d'une onde sonore pour oscillateur à partir des rendements historiques d'une compagnie réelle.</p>
+
+<p>Depuis quelques années, je nourris un intérêt sonore et académique envers la notion de volatilité.</p>
+
+<p>J'ai eu le loisir d'explorer l'historique de la volatilité dans un essai inachevé, publié sur [On the history of uncertainty measures: The standard deviation](1). Lors de discussions ayant eu lieu au [Recurse Center](2), j'ai expliqué [mon processus de sonification des données](3) à quelques intéressé.e.s. Suite à la mention de cet intérêt pour la volatilité, mon souhait de pouvoir l'entendre, l'écouter, un participant (Emil Ng) a mentionné la possibilité de créer des ondes sonores directement à partir des données financières. L'idée m'est restée en tête et je commençai des recherches sur la façon de réaliser ce projet.</p>
+
+<p>Cette première étude est l'aboutissement de quelques séances de recherche menées depuis l'an dernier. D'abord, j'ai voulu comprendre comment créer une onde sonore (waveform) dans Csound - il me fallait une f-table. Ensuite, j'ai lu sur comment lire cette onde avec un oscillateur - dans notre cas, poscil3. J'ai écrit un script Python pour générer les f-tables contenant les données financières, puis un second script pour générer la partition proprement dite. Il me manquait encore quelques notions de synthèse sonore pour arriver à cette première étude, notamment trouver une façon de contraindre les valeurs des rendements à être contenues dans l'intervalle [-1,1] - pour ce faire, j'ai utilisé une version recentrée de la fonction sigmoïde.</p>
+
+<p>J'ai beaucoup appris sur les fondamentaux du son et de la synthèse sonore durant la création de cette étude. Il reste encore des artefacts dans le morceau, mais l'essentiel y est. </p>
+
+<h2 id="references"><a href="#references">références</a></h2>
+
+<p> (1) <a href="https://www.eviau.net/ecrits/stdev.html">On the history of uncertainty measures: The standard deviation</a></p>
+<p> (2) <a href="eviau.net/rc/">Recuser Center - mon expérience</a></p>
+<p> (3) <a href="github.com/eviau/datasonification">processus de sonification de données</a></p> 
+            
+    </div>
+    
+    <nav id="menu">
+    <p><a href="../en/frozenmusic.html">english version</a></p>
+    <p><a href="#liens">liens</a></p>
+        <p><a href="#extraits">extraits</a></p>
+        <p><a href="#demarche">démarche</a></p>
+    <p><a href="./index.html">retour à l'accueil</a></p>
+        
+    </nav>
+
+    </div>
+
+  </body>
+  
+
+
+</html>

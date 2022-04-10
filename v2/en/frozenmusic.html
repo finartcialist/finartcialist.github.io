@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>frozen music - finartcialist</title>
+    <link href="../style2.css" rel="stylesheet">
+  </head>
+  <body>
+  
+    <header>  
+    <p><a id="h1-header" href="../index.html">finartcialist</a><p>
+    <p class="header-p">art & finance - since 2016</p>
+<p class="header-p"> contact :  <a href="mailto:info@finartcialist.com">info@finartcialist.com</a></p>
+    </header>
+    
+    <div id="main-container">
+
+    
+    <div id="main-content">
+
+    
+    <h1 class="project-title" id="titre"><a href="#titre">frozen music --- one</a></h1>
+    <h2 id="liens"><a href="#links">links</a></h2>
+<p><a href="https://finartcialist.bandcamp.com/album/frozen-music-one">album on Bandcamp</a></p>
+    <h2 id="extraits"><a href="#sample">sample</a></h2>
+<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3741726631/size=small/bgcol=ffffff/linkcol=2ebd35/transparent=true/" seamless><a href="https://finartcialist.bandcamp.com/album/frozen-music-one">frozen music --- one by finartcialist</a></iframe>
+    <h2 id="demarche"><a href="#process">process</a></h2>
+    
+   <p>It is not only architecture that can be seen as frozen music - data also can be.</p>
+
+<p>The topic of this first tudy is the creation of a waveform for oscillator, based on historical returns of a real business.</p>
+
+<p>I have been nurturing an academic and artistic interest towards volatility for a few years now.</p>
+
+<p>I've explored the history of volatility as a concept in an unfinished essay, published on [On the history of uncertainty measures: The standard deviation](1). During discussions that took place at the [Recurse Center](2), I've been able to explain my [data sonification process](3) to a few curious people. Following my mention of my interest towards volatility, and my desire to hear it, to listen to it, one of them (Emil Ng) mentionned the possibility of creating waveforms directly from the data. The idea stuck with me and I soon started doing research on how I could do this.</p>
+
+<p>This first study is the result of a few research sessions that took place since last year. First, my goal was to understand how to create a waveform in Csound - I needed an f-table. Then, I've read on how to read this f-table wiht an oscillator - in this case, poscile3. I wrote a Python script to generate the f-tables containing the financial data, as well as a second script to generate the score itself. I still needed a few sound synthesis concepts to manage to do this first study, namely finding a way to constrain the data to be between [-1,1] - to do this, I've used a recentered version of the sigmoid function.</p>
+
+<p>I've learned a lot on the fundamentals of sound synthesis and on sound during this study. There are still sound artefacts in the work, but the essential is there. </p>
+
+<h2 id="references"><a href="#references">references</a></h2>
+
+<p> (1) <a href="https://www.eviau.net/ecrits/stdev.html">On the history of uncertainty measures: The standard deviation</a></p>
+<p> (2) <a href="eviau.net/rc/">Recuser Center - my experience</a></p>
+<p> (3) <a href="github.com/eviau/datasonification">data sonification process</a></p> 
+            
+    </div>
+    
+    <nav id="menu">
+    <p><a href="../fr/frozenmusic.html">french version</a></p>
+    <p><a href="#links">links</a></p>
+        <p><a href="#sample">sample</a></p>
+        <p><a href="#process">process</a></p>
+    <p><a href="./index.html">back to home</a></p>
+        
+    </nav>
+
+    </div>
+
+  </body>
+  
+
+
+</html>
