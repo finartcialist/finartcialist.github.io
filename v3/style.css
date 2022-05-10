@@ -1,0 +1,44 @@
+html{
+
+scroll-behavior: smooth;
+}
+
+body {
+
+background-color: #35524A;
+color: #D8D2E1;
+font-family: monospace;
+}
+
+header, main, footer{
+
+background-color: #D9F2B4;
+color: #35524A;
+padding: 3%;
+margin: 5%; 
+border-radius: 3px;
+}
+
+h1{
+font-size: 64px;
+color: #A76571;
+text-shadow: 3px 3px 3px #35524A;
+}
+
+p{
+font-size: 24px;}
+
+h2{
+font-size: 48px;
+text-shadow: 3px 3px 3px #A76571;
+}
+
+h3{
+
+font-size: 32px;
+}
+
+a {
+color: #35524A;
+text-decoration-color: #A76571;
+}

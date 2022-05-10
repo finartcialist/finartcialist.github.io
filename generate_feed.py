@@ -58,28 +58,33 @@ fg_en.language("en")
 
 en_path = "v2/en/blog/"
 
+def add_entry_english(en_path, flag_index):
+    index = "index.html"
 
-for root, subFolders, files in os.walk(dot + en_path):
-    path = os.path.basename(root)
+    for root, subFolders, files in os.walk(dot + en_path):
+        path = os.path.basename(root)
 
-    for f in files:
-        if f != "index.html":
-            if len(path) > 0:
-                path_to_html = en_path + path + '/' + f
-            else:
-                path_to_html = en_path + f
-            print(path_to_html)
-            with open('./' + path_to_html) as html_text:
-                soup = BeautifulSoup(html_text, 'html.parser')
-                title = soup.title.string    
+        for f in files:
+            if (flag_index and f == index) or (flag_index or f != index) and f != "style.css":
+                if len(path) > 0:
+                    path_to_html = en_path + path + '/' + f
+                else:
+                    path_to_html = en_path + f
+                print(path_to_html)
+                with open('./' + path_to_html) as html_text:
+                    soup = BeautifulSoup(html_text, 'html.parser')
+                    title = soup.title.string    
     
-            fe = fg_en.add_entry()
-            fe.id("https://www.finartcialist.com/" + path_to_html)
-            fe.title(title)
-            # if len(path) > 0:
-            fe.link(href="https://www.finartcialist.com/" + path_to_html)
-            # else:
-            #   fe.link(href="https://www.finartcialist.com/" + f)
-            fe.updated(dt.fromtimestamp(os.path.getmtime(dot + en_path + path + '/'+ f),tz=gettz("America/New York")))
+                fe = fg_en.add_entry()
+                fe.id("https://www.finartcialist.com/" + path_to_html)
+                fe.title(title)
+                # if len(path) > 0:
+                fe.link(href="https://www.finartcialist.com/" + path_to_html)
+                # else:
+                #   fe.link(href="https://www.finartcialist.com/" + f)
+                fe.updated(dt.fromtimestamp(os.path.getmtime(dot + en_path + path + '/'+ f),tz=gettz("America/New York")))
+
+add_entry_english(en_path, False)
+add_entry_english('v3/', True)
 
 fg_en.atom_file('feed.xml')
