@@ -85,6 +85,6 @@ def add_entry_english(en_path, flag_index):
                 fe.updated(dt.fromtimestamp(os.path.getmtime(dot + en_path + path + '/'+ f),tz=gettz("America/New York")))
 
 add_entry_english(en_path, False)
-add_entry_english('v3/', True)
+add_entry_english('v3/', False)
 
 fg_en.atom_file('feed.xml')
