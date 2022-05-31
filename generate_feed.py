@@ -59,13 +59,13 @@ fg_en.language("en")
 en_path = "v2/en/blog/"
 
 def add_entry_english(en_path, flag_index):
-    index = "index.html"
+    index = ["index.html", "v3-02.html"]
 
     for root, subFolders, files in os.walk(dot + en_path):
         path = os.path.basename(root)
 
         for f in files:
-            if (flag_index and f == index) or (flag_index or f != index) and f != "style.css":
+            if (flag_index and f == index) or (flag_index or f not in index) and f != "style.css":
                 if len(path) > 0:
                     path_to_html = en_path + path + '/' + f
                 else:
@@ -85,6 +85,6 @@ def add_entry_english(en_path, flag_index):
                 fe.updated(dt.fromtimestamp(os.path.getmtime(dot + en_path + path + '/'+ f),tz=gettz("America/New York")))
 
 add_entry_english(en_path, False)
-add_entry_english('v3/', True)
+add_entry_english('v3/', False)
 
 fg_en.atom_file('feed.xml')
