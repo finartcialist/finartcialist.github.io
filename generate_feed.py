@@ -1,4 +1,4 @@
-# https://finartcialist.com/en/atom_en.xml
+# https://finartcialist.com/en/feed.xml
 
 from datetime import datetime as dt
 from dateutil.tz import gettz
