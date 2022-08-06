@@ -1,4 +1,4 @@
-# https://finartcialist.com/en/atom_en.xml
+# https://finartcialist.com/en/feed.xml
 
 from datetime import datetime as dt
 from dateutil.tz import gettz
@@ -59,7 +59,7 @@ fg_en.language("en")
 en_path = "v2/en/blog/"
 
 def add_entry_english(en_path, flag_index):
-    index = ["index.html", "v3-02.html"]
+    index = ["index.html", "v3-02.html", "v3-03.html"]
 
     for root, subFolders, files in os.walk(dot + en_path):
         path = os.path.basename(root)
