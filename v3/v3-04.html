@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>v3 - 04</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+  
+  <header>
+  
+  <h1>v3 - 04 - entrevue sous forme d'auto-portrait</h1>
+  
+  <p>aller de l'avant.</p>
+  
+  </header>
+  
+  <main>
+  
+<h2 id="contexte">Contexte</h2>
+<p>Le projet <em>finartcialist</em> suscite toutes sortes de questions, notamment sur la nature du projet, les questions qui l’animent ou son historique. Sous forme d’autoportrait en forme d’entrevue, voici quelques-unes de ces questions afin que vous puissiez mieux comprendre la démarche.</p>
+<h2 id="questions">Questions</h2>
+<h3 id="quelle-est-la-petite-histoire-de-finartcialist">Quelle est la petite histoire de finartcialist ?</h3>
+<p>En 2014, deux évènements majeurs ont eu lieu pour moi : j’ai commencé des études de maîtrise en ingénierie financière et j’ai découvert l’œuvre de Ibghy&amp;Lemmens au Musée d’art contemporain de Montréal.</p>
+<p>C’est la découverte de leurs oeuvres qui m’a permis d’envisager l’intersection de l’art et de l’économie de façon très concrète; <a href="http://ibghylemmens.com/The_Prophets.html">The Prophets</a>, réalisée de 2013 à 2015, est constituée de minuscules sculptures faites de matériaux du quotidien et illustrant des concepts et des données des sciences économiques. Ces centaines de microsculptures sont ensuite disposées sur une grande table blanche permettant de les observer.</p>
+<p>Lorsque j’ai vu <em>The Prophets</em>, je venais à peine de commencer ma maîtrise, à la suite d’études de premier cycle en mathématiques et en économie. Cette œuvre m’a marquée de par la qualité de la recherche académique effectuée: chaque concept semblait finement et précisément choisi, étudié puis mis en exergue.</p>
+<p>Cette idée d’art, d’économie et de finance m’est restée en tête pendant un an ou deux, jusqu’à mon cours de Simulations Monte Carlo. Dans le cadre de celui-ci, nous devions reproduire des articles scientifiques utilisant des simulations Monte Carlo. Un soir où je travaillais sur un de ces programmes informatiques, je me suis demandée quel serait le son de ces algorithmes.</p>
+<p>Je voulais les écouter, tout simplement. Je voulais écouter ces algorithmes que j’utilisais à toutes les sauces, dans l’espoir de mieux les comprendre et de percer leur secret.</p>
+<p>Je ne connaissais presque rien à la synthèse sonore ou à la musique. Je n’avais jamais entendu parler du domaine de la <em>sonification des données</em>. Mais j’étais motivée et je commençai rapidement des recherches sur les différentes façons de créer de la musique par ordinateur.</p>
+<h3 id="avec-quels-outils-as-tu-commencé-à-travailler">Avec quels outils as-tu commencé à travailler ?</h3>
+<p>Au tout début, je définissais des notes MIDI à partir des différentes étapes des algorithmes que j’utilisais. Mes programmes étaient réalisés avec MATLAB - j’utilisais des outils audio pré-définis, comme <a href="https://www.mathworks.com/help/audio/ug/midi-synthesizer.html">ce guide sur les synthétiseurs MIDI avec MATLAB</a>.</p>
+<p>Rapidement, j’ai voulu écouter les autres programmes informatiques que je créais, mais cette fois-ci avec le langage de programmation <code>C</code>. C’est un peu flou en ce moment - il faudrait que je relise mes notes et mes programmes - mais je me souviens avoir exploré comme créer des ondes sonores directement en <code>C</code>. Le son qui en résultait était difficile à contrôler. Je continuai mes recherches.</p>
+<p>Finalement, j’ai découvert en premier lieu <code>libsndfile</code>, une librairie pour lire et écrire des données audio dans des fichiers. Encore une fois, je me doutais bien que ce n’était pas l’outil pour moi - qu’il était probablement trop <em>low-level</em> dans la pile informatique pour pouvoir être utilisé directement pour la création sonore. Après quelques semaines de recherche, je fini par découvrir <a href="https://csound.com/">Csound</a>, qui me semblait être plus exactement ce dont j’avais besoin. C’est encore aujourd’hui mon principal outil de composition et de création d’instruments.</p>
+<h3 id="comment-choisis-tu-tes-données-pour-la-sonification">Comment choisis-tu tes données pour la sonification ?</h3>
+<p>Je commence souvent avec le même jeu de données mais en tentant de l’explorer d’une nouvelle façon.</p>
+<p>Récemment, j’ai réalisé qu’en fait, ce que je voulais vraiment était de <em>créer des instruments pour des données spécifiques - des instruments faits sur mesure pour ceux-ci</em>.</p>
+<p>Dans cet objectif, je m’attarde plus à l’allure qu’ont les données et au potentiel sonore de celles-ci. Par exemple, je regarde les différentes statistiques que l’on peut définir sur des données, comme la variance. Des données ayant une forte variance, c’est-à-dire changeant souvent et rapidement, me permettront d’explorer différents paysages sonores que des données plus constantes dans le temps.</p>
+<h3 id="comment-choisis-tu-les-autres-médiums-les-autres-projets">Comment choisis-tu les autres médiums, les autres projets ?</h3>
+<p>J’y vais selon mes intérêts et compétences du moment, et aussi selon ce que je souhaite apprendre.</p>
+<p>Par exemple, il existe des liens historiques forts entre la fabrication des matières textiles et la naissance de l’informatique; pensons à la machine à tisser Jacquard, une des sinon la première utilisation industrielle de cartes perforées, en 1801. Étant donné l’importance de l’informatique et des technologies de la communication dans la finance, j’aimerais prendre le temps d’explorer ces liens entre tissage et informatique plus en détails. Du fait de la pandémie, je n’ai pas encore eu l’opportunité de ce faire.</p>
+<p>Je vais parfois explorer d’autres médiums juste pour voir les possibilités, pour tenter de créer un lien - ceci étant dit, il ne faut pas forcer le sens. Parfois, des exploraitons ne sont exactement que cela.</p>
+<h3 id="quelles-sont-les-principales-questions-qui-ont-animé-le-projet">Quelles sont les principales questions qui ont animé le projet ?</h3>
+<p>Au tout début du projet, je voulais surtout pouvoir écouter les algorithmes que j’utilisais dans mes cours, mettre à jour leurs secrets et avoir une conversation avec ceux-ci. Puis le projet a évolué; lorsque j’ai commencé à explorer la broderie comme médium, c’est là que j’ai voulu définir le projet <em>finartcialist</em> comme étant une exploration de la finance comme médium artistique. Je voulais créer de l’art qui prenne la finance comme matière brute, et non pas comme sujet.</p>
+<p>Ensuite, il y a eu une période où j’ai souhaité participé au processus de démystification de la finance: comment peut-on se servir de procédés et processus artistiques pour ouvrir cette boîte noire et mettre au jour ses fonctionnements, ses mécanismes ? C’est toujours une avenue qui m’intéresse et à laquelle j’aimerais revenir plus tard.</p>
+<p>Plus récemment, c’est une démarche esthétique d’épuisement de la finance qui m’anime. Peut-on tout dire ce qu’il à dire sur la finance et l’économie ? Peut-on abosrber puis dépasser ces sujets ?</p>
+<h3 id="comment-le-projet-a-t-il-évolué-au-fil-des-années">Comment le projet a-t-il évolué au fil des années ?</h3>
+<p>Il y a eu cette évolution des outils, ce passage de projet de sonification des données à un projet plus général, plus vaste. Je crains un peu de trop m’étendre, d’ouvrir un paquet de portes que je ne pourrai refermer ensuite… C’est un risque qui n’est pas calculé mais que je suis prête à prendre, je pense.</p>
+<p>La façon que j’ai trouvé d’aborder autant de perspectives sur ce thème est de me donner une question principale par année, pour guider mes projets. Je ne m’y tiens pas toujours; en 2021, c’était “ce que sont les marchés”. Le thème de 2022 sera annoncé plus tard - pour le moment j’envisage que ce soit tout simplement “le temps”.</p>
+<p>Récemment, je me pose beaucoup de questions sur la présence du numérique dans mon oeuvre; j’ai envie d’explorer d’autres médiums, d’autres matérialités. C’est un peu dans cette perspective que je me suis engagée dans le projet <a href="https://www.finartcialist.com/escarcelle">escarcelle, le marché aux sentiments</a>. C’est aussi une perspective intimiste, peut-être plus personnelle, du projet <em>finartcialist</em>.</p>
+<h3 id="aimerais-tu-faire-des-collaborations">Aimerais-tu faire des collaborations ?</h3>
+<p>Bien sûr! D’ailleurs, n’hésitez pas à me contacter <a href="mailto:info@finartcialist.com">par courriel</a> à ce propos.</p>
+<h3 id="quelles-sont-les-questions-que-tu-aimerais-explorer-en-collaboration">Quelles sont les questions que tu aimerais explorer en collaboration ?</h3>
+<p>J’aimerais revenir à la synthèse sonore, aiguiser mon intuition et mes connaissances à ce sujet.</p>
+<p>Un autre aspect est la création de marchés artificiels pour explorer la notion de design de marché dans un contexte artistique.</p>
+<p>Je suis ouverte aux suggestions bien entendu. L’invitation est lancée.</p>
+<h3 id="la-finance-laisse-rarement-les-gens-indifférents.-comment-négocies-tu-la-nature-du-projet">La finance laisse rarement les gens indifférents. Comment négocies-tu la nature du projet ?</h3>
+<p>Je pense qu’il faut expliquer et ré-expliquer, contextualiser le projet parmi ceux qui lui sont similaires, expliciter la démarche qui en est une de compréhension académique et d’exploration artistique.</p>
+<p>C’est avec cet objectif de contextualisation que j’écris le zine <em>mouvements sous-jacents</em>, qui contient toujours une liste d’oeuvres consultées, afin de mettre de l’avant d’autres points de vue, d’autres démarches artistiques qui existent ailleurs, par d’autres, sur le sujet de la finance et de l’art.</p>
+<h3 id="pourquoi-avoir-choisi-la-finance-comme-sujet-principal">Pourquoi avoir choisi la finance comme sujet principal ?</h3>
+<p>C’est vraiment un peu par hasard, et ensuite par obsession de vouloir comprendre ce milieu, cet univers. C’est un intérêt académique.</p>
+<h3 id="y-a-t-il-dautres-sujets-qui-tintéressent">Y a-t-il d’autres sujets qui t’intéressent ?</h3>
+<p>Oui, plusieurs. Certains sujets qui me sont chers: la création en arts numériques dans le cadre d’une démarche <em>low tech</em>; la ré-appropriation des technologies de communication par la population en général; les mathématiques, notamment la géométrie et la topologie; l’enseignement de la programmation; les langages de programmation ésotériques; l’intelligence artificielle…</p>
+<p>La liste est longue, mais ce sont là les principaux points. J’explore ces sujets de façon indépendante, et j’écris parfois sur <a href="https://www.eviau.net">eviau.net</a> sur ces sujets.</p>
+<h3 id="y-a-t-il-des-médiums-que-tu-aimerais-travailler">Y a-t-il des médiums que tu aimerais travailler ?</h3>
+<p>J’aimerais mieux comprendre les protocoles de communication afin de les utiliser et de les détourner dans un contexte artistique. Créer une radio amateure ou du moins, animer une émission de radio, par exemple; avoir mon propre serveur de courriels… Ce genre de choses.</p>
+<p>J’ai eu l’opportunité d’explorer certains de ces protocoles dans le cadre <a href="https://www.eviau.net/rc">d’une retraite au Recurse Center</a>.</p>
+<h3 id="en-quoi-la-finance-les-marchés-léconomie-peuvent-ils-nourrir-une-pratique-artistique">En quoi la finance, les marchés, l’économie, peuvent-ils nourrir une pratique artistique ?</h3>
+<p>Ce sont des sujets qui peuvent sembler arrides, en effet ! Arrides et polarisants, clivants.</p>
+<p>Ce qui me nourrit dans ces sujets, c’est la place qu’ils occupent dans nos sociétés; c’est le potentiel de rencontre entre des êtres humains. Ce sont les différents types de marché; on pense aux mécanismes financiers, oui, mais je m’intéresse aussi aux marchés fermiers, aux marchés d’artisans… Aux coopératives et aux échanges, à la notion d’échange de façon générale.</p>
+  </main>
+  
+  <footer>
+  <p><a href="https://www.finartcialist.com">back to current website</a></p>
+  </footer>
+  
+  
+  
+  </body>
+</html>
