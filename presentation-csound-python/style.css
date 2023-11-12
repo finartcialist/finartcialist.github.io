@@ -3,6 +3,11 @@ html{
 font-family: math, sans;
 }
 
+img{
+width: 50vw;
+height:auto;
+
+}
 
 header, .slide{
 border: solid black 2px;
@@ -12,11 +17,14 @@ margin: 2vw 2vh;
 
 .slide {
 display: flex;
+flex-flow: row wrap;
+
 
 }
 
 .slide-text{
 
 padding: 5vh 5vw;
+max-width: 450px;
 
 }
