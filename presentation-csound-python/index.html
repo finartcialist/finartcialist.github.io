@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>Sonification de données avec Python et Csound - présentation</title>
+    	<link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+  
+  
+  <header>
+  
+  <h1>Sonification de données avec Python et Csound</h1>
+  <p>transcription approximative de ce qui a été présenté à Montréal-Python le 30 octobre 2023.</p>
+  <p>Par Édith Viau pour finartcialist.</p>
+  <p>pour écouter des projets de sonification de données réalisés dans le cadre de finartcialist: <a href="https://finartcialist.bandcamp.com">finartcialist.bandcamp.com</a></p>
+  </header>
+  
+  <main>
+  
+  <div class="slide">
+  <p><img src="./img0.jpg"></p>
+  
+  <div class="slide-text">
+  <p>En 2019, je vous avais présenté lors de Montréal-Python un de mes projets nommé <a href="https://github.com/finartcialist/original-luminx">LuminX</a>, ici même dans les locaux de Plotly. Cela fait maintenant quatre ans et je voulais vous donner une petite mise-à-jour en Python sur mes projets d'art, d'économie et de finance.</p>
+  
+  <p>Cette photo a été prise lors d'une résidence organisée par <a href="http://artsouterrain.com/">Art souterrain</a> à l'automne 2022. Dans le cadre du projet <a href="https://creerdesponts2022.artsouterrain.com/">Créer des ponts</a>, qui vise à rendre disponible des locaux commerciaux vacants pour des projets artistiques temporaires, j'ai pu accéder aux magnifiques locaux d'une ancienne succursale d'une banque située au 936 Sainte-Catherine est, à Montréal.</p>
+  
+  <p>La photo a été prise par Amelia Moses et montre la porte du hall d'entrée, surmontée d'une horloge, ainsi qu'une de mes oeuvres, <a href="https://finartcialist.com/escarcelle/">escarcelle</a>, le marché aux sentiments. Ce marché prend la forme d'un échange de cartes postales.</p>
+  
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img1.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Aujourd'hui je souhaite vous parler d'art sonore en vous présentant mon utilisation de Python et de Csound.</p>
+  
+  <p>Je m'appelle <a href="https://www.eviau.net">Édith Viau</a> et ces oeuvres ont été réalisés dans le cadre du projet <a href="https://www.finartcialist.com">finartcialist</a>. Ce projet est une exploration du monde de l'économie, de la finance et du marché du travail en général par le biais de méthodes artistiques, notamment la sonification de données.</p>
+  
+  <p>La présentation initiale était prévue pour le 25 septembre, mais j'avais un bon rhume ce jour-là et je souhaitais vous l'épargner.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img2.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Sur cette diapositive, on voit une photo prise par Thierry Du Bois à l'automne 2022. Cette photo montre l'intérieur des locaux de la banque où a eu lieu ma résidence avec Art souterrain.</p>
+  <p>On peut voir différents objets en lien avec ma pratique, notamment un projecteur pour faire des présentations, une table de travail, un comptoir de banque, un tableau d'idéation avec des post-its.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img3.jpg"></p>
+  
+  <div class="slide-text">
+  <p>J'aime bien savoir à quoi m'attendre d'une présentation, donc voici mes trois points principaux à retenir. J'ai voulu ressortir des points qui viennent de ma pratique mais qui sont suffisamment généraux pour être utile à l'extérieur de ce cadre.</p>
+  <p>Le premier: <b>connaître le vocabulaire juste</b> souligne qu'un bon lexique facilite grandement l'apprentissage de nouveaux concepts... ainsi que les recherches sur Internet.</p>
+  <p>En second: <b>choisir le bon outil pour la tâche</b> nous rappelle que même s'il est techniquement possible de planter un clou avec un tournevis, ça va tout de même vraiment mieux avec un marteau.</p>
+  <p>Et le dernier: <b>manipuler des données avec Python, c'est génial!</b> vise à souligner le rôle de facilitateur que Python joue dans ma pratique, et à mettre de l'avant cette qualité certaine de l'écosystème Python.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img4.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Nous pouvons commencer avec un peu de contexte sur le projet <b>finartcialist</b> et sur moi-même.</p>
+  <p>En 2014 - il y a déjà dix ans - je termine à l'Université du Québec à Montréal un baccalauréat en mathématiques, avec des cour d'économie financière.</p>
+  <p>À l'automne, alors que je commence ma maîtrise en ingénierie financière à HEC Montréal, je visite le Musée d'art contemporain de Montréal pour voir l'exposition <a href="https://macm.org/expositions/les-prophetes/">Les prophètes</a>. Au coeur de cette exposition: une oeuvre monumentale composée d'une pléthore de micro-sculptures réalisées avec des matériaux du quotidien par le duo d'artistes Ibghy et Lemmens. Chaque sculpture démontre ou illustre un concept économique ou des données financières.</p>
+  <p>Cette oeuvre marque mon imaginaire et ouvre une porte: on peut parler de choses un peu aride, un peu intellectuelles, de façon très créative, et ce, sans remuer ciel et terre dans les moyens employés.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img5.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Par la suite, je continue mes études à HEC Montréal.</p>
+  <p>Un samedi soir un peu quelconque, genre un soir d'hiver sombre, je suis attablée à mon bureau pour travailler sur un devoir du cours de Simulation Monte Carlo... et je pense à comment rendre le tout plus intéressant. Quels sont les moyens à ma disposition pour mieux percer les secrets des méthodes mathématiques que j'emploi et des données utilisées par ces algorithmes ?</a>
+  <p>Je ne suis plus certaine si à ce moment, j'avais déjà entendu des oeuvres d'art sonore réalisées à base de données... je pense que oui - probablement - mais p'être pas aussi ?</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img6.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Toujours est-il que je me mets rapidement à imaginer écouter les données et les algorithmes: comment sonifier les procédés de mes devoirs ?</p>
+  <p>Cette question deviendra une obsession pour moi, et formera le socle du projet finartcialist.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img7.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Donc quand je parlais du choix des outils, voici quelques-uns de mes premiers essais.</p>
+  <p>Au début, je me débrouillais pour générer des fichiers MIDI avec le programme MATLAB. C'était très limitant au point de vue de l'esthétique sonore de la création, donc j'ai continué mes recherches pour trouver des outils plus appropriés.</p>
+  <p>Au fil de mes lectures, je découvre le terme <b>synthèse sonore</b>. Au début de mes démarches, je n'avais pas les bons mots et cela m'a pris du temps pour me constituer un vocabulaire me permettant de m'exprimer adéquatemment.</p>
+  <p>Des fois, je cherchais des trucs tel que "comment faire musique ordinateur"...</p>
+  <p>Après MATLAB, j'ai cherché des projets en C parce que c'était le langage utilisé dans le cours de Simulation Monte Carlo. J'ai trouvé la bibliothèque libsndfile, qui a été utile pour me faire comprendre que ce que je voulais faire était en fait plutôt complexe. C'est une bibliothèque plutôt <i>low-level</i> et c'était fastidieux de créer avec celle-ci. Je continuai mes recherches.</p>
+  <p>De fil en aiguille, j'ai mis la main sur le projet <a href="https://www.csound.com">Csound</a>, et ce fût le coup de foudre.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img8.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Donc Csound, c'est un projet qui ressemble à du XML mélangé avec des opcodes style assembleur. L'implémentation originale est en C, d'où le nom. Et la rétrocomptabilité est assurée autant que faire se peut dans l'idée originale du projet - sur le site web, on peut lire qu'on travaille fort sur le fait qu'il soit possible en 2023 d'écouter une pièce de 1986, et qu'une pièce de 2023 devrait pouvoir être écoutée même en 2050.</p>
+  <p>Ça c'est intéressant pour les artistes car cela facilite grandement les tâches liées à l'archivage, à la conservation et à la préservation des oeuvres numériques.</p>
+  </div>
+  </div>
+  
+    <div class="slide">
+  <p><img src="./img9.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Cette image montre un fichier Csound de base, avec les tags XML, les opcodes, et les données.</p>
+  <p>(Lors de la présentation, j'ai donné de longues explications reprises d'un atelier archivé dans un <a href="https://www.github.com/eviau/datasonification">repo github de datasonification</a>. Veuillez vous y référer pour l'essentiel du propos.)
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img10.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Comment sonifie-t-on des données qui ne sont pas a priori musicales ?</p>
+  <p>Voici quelques-unes des techniques utilisées:</p>
+  <ul>
+  <li>Associer une note spécifique à une donnée: par exemple, chaque fois que j'ai le nombre 5, je joue la note do.</li>
+  <li>Associer une plage de données à une note: si le nombre de valeurs possibles pour les données est plus grand que le nombre de notes possibles, je peux regrouper les données et associer chaque groupe à une note. Par exemple, je peux associer les valeurs de 5 à 10 à la note do.</li>
+  <li>Associer une ou des données à plusieures notes: pour générer une certaine musicalité, dans le cas de données plus aléatoires par exemple, je peux associer les données à un extrait d'une mélodie, remixant la pièce originale.</li>
+  </ul>
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img11.jpg"></p>
+  
+  <div class="slide-text">
+  <p>La raison principale qui me fait choisir Python dans mon processus en est une d'efficacité.</p>
+  <p>Je dois souvent traiter des centaines, voire des milliers de lignes de données dans des fichiers .csv, et Python est tout-à-fait adéquat pour manipuler les données.</p>
+  <p>J'utilise Python pour me faciliter la tâche du traitement des données afin de générer des partitions musicales dans Csound.</p>
+  <p>Pour moi, c'est plus simple de faire cette partie dans Python que dans Csound.</p>
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img12.jpg"></p>
+  
+  <div class="slide-text">
+  <p>(Durant la présentation, je fais un survol de ce qui se trouve dans <a href="https://www.github.com/eviau/datasonification">le repo datasonification sur Github</a>, en exécutant les fichiers Csound s'y trouvant afin de faire une démo du logiciel. Je vous invite à consulter le repo.)</p>
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img13.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Quelles sont les techniques que j'utilise actuellement pour la sonification de données ?</p>
+  <p>Voici deux examples: frozen music --- one, sortie en 2022, et implied weather, sorti en 2023 et présenté lors du concert de l'<a href="https://www.icad.org/2023">International Conference of Auditory Display</a>, en Suède.</p>
+  
+  <p>Dans <a href="https://finartcialist.bandcamp.com/album/frozen-music-one">frozen music</a>, j'utilise les données des marchés finanicers afin de générer les ondes sonores qui seront utilisées par l'oscillateur pour créer le son. Le titre vient de la réflexion que l'architecture est une forme de musique congelée, au sens de potentielle: il suffirait d'utiliser le tracé des immeubles et d'envoyer ces données à un oscillateur pour générer du son.</p>
+  
+  <p>Dans <a href="https://finartcialist.bandcamp.com/album/implied-weather">implied weather</a>, j'utilise les données des marchés de produits basés sur la météo pour changer la vitesse à laquelle un échantillon sonore est joué. Cet échantillon est constitué d'un enregistrement d'eau en train de bouillir sur un four électrique.</p>
+  
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img14.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Voilà qui conclut ma présentation pour ce soir. Petit rappel de ce qui est à retenir: connaître le vocabulaire juste; prendre le temps de trouver le bon outil pour la tâche; manipuler des données avec Python, c'est génial !</p>
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img15.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Pour me contacter directement par courriel: <a href="mailto:info@eviau.net">info@eviau.net</a></p>
+  <p>site web du projet: <a href="https://www.finartcialist.com">finartcialist.com</a></p>
+  <p>site web avec tous mes projets: <a href="https://www.eviau.net">eviau.net</a></p>
+  </div>
+  </div>
+    <div class="slide">
+  <p><img src="./img16.jpg"></p>
+  
+  <div class="slide-text">
+  <p>Merci pour votre écoute et votre attention :) Merci à Montréal-Python pour l'invitation et l'organisation, et à Plotly pour l'accueil.</p>
+  </div>
+  </div>
+  
+  
+  
+  </main>
+  
+  
+  </body>
+</html>
+
